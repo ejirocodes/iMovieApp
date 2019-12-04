@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
 
+:root {
+    --main-dark: #c72c41;
+    --main-light: #ffa259;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,4 +32,15 @@ body {
     font-size: 2rem;
     line-height: 2;
     cursor: url();
+}
+
+button#search {
+    background: linear-gradient(to left, var(--main-dark), var(--main-light));
+    color: #fff;
+    outline: none;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: .4rem;
 }
