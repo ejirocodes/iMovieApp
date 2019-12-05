@@ -3,6 +3,8 @@
 :root {
     --main-dark: #c72c41;
     --main-light: #ffa259;
+    --bg-dark: #004445;
+    --bg-light: #55ae95;
 }
 
 * {
@@ -31,7 +33,7 @@ body {
     font-weight: 600;
     font-size: 2rem;
     line-height: 2;
-    cursor: url();
+    cursor: url('../assets/cursor.png'), auto;
 }
 
 button#search {
@@ -39,8 +41,17 @@ button#search {
     color: #fff;
     outline: none;
     border: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    text-transform: uppercase;
     padding: 1rem 2.5rem;
     border-radius: .4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}
+
+button#search:hover {
+    background: linear-gradient(to top right, var(--main-dark), var(--main-light));
+    transform: scale(1.06);
 }
