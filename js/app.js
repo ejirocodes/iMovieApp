@@ -8,9 +8,13 @@ const imgUrl = 'https://image.tmdb.org/t/p/w400';
 
 function movieSection(movies) {
     return movies.map((movie) => {
-        return `
+        if (movie.poster_path) {
+            return `
                 <img src=${imgUrl + movie.poster_path} data-movie-id=${movie.id}/>
                 `;
+        } 
+
+
     });
 }
 
@@ -20,7 +24,7 @@ function createMovieContainer(movies) {
     movieElement.setAttribute('class', 'movie');
 
     const movieTemplate = `
-        <section class="section">
+        <section class="movie-section">
             ${ movieSection(movies)}
         </section>
         <div class="content">

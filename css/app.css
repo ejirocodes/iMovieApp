@@ -55,3 +55,16 @@ button#search:hover {
     background: linear-gradient(to top right, var(--main-dark), var(--main-light));
     transform: scale(1.06);
 }
+
+section.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+
+section.movie-section img {
+    width: 30rem;
+    margin: .5rem;
+}
