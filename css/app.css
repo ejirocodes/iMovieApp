@@ -34,6 +34,7 @@ body {
     font-size: 2rem;
     line-height: 2;
     cursor: url('../assets/cursor.png'), auto;
+    background-color: #f7f7f7;
 }
 
 .container h1 {
@@ -43,6 +44,8 @@ body {
     margin-bottom: 1.4rem;
     text-shadow: 2px 1px 3px rgba(0, 0, 0, .4);
     text-transform: capitalize;
+    line-height: 1.4;
+    margin-top: 3rem;
 }
 
 
@@ -57,9 +60,9 @@ input#inputValue {
     padding: 1rem 8rem 1rem 1.2rem;
     margin-bottom: 1.4rem;
     border: 1px solid var(--bg-dark);
-     font-size: 1.5rem;
-     font-weight: 600;
-     color: #004445;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #004445;
 }
 
 input#inputValue::placeholder {
@@ -72,7 +75,7 @@ input#inputValue::placeholder {
 input#inputValue:focus {
     outline: 0;
     box-shadow: 1px 0 4px rgba(1, 19, 66, 0.4),
-    -1px 0 4px rgba(1, 19, 66, 0.4);
+        -1px 0 4px rgba(1, 19, 66, 0.4);
 }
 
 button#search {
@@ -85,7 +88,7 @@ button#search {
     text-transform: uppercase;
     padding: 1rem 2.5rem;
     text-align: center;
-    cursor: pointer;
+    cursor: inherit;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
     margin-bottom: 3.2rem;
 
