@@ -2,7 +2,7 @@
 
 `An open source web application for searching your favourite movies`
 
- [Website](https://www.imovie-app.netlify.com)
+ [Website](https://imovie-app.netlify.com)
 
 Movie API powered by [The Movie DB](https://www.themoviedb.org/)
 
