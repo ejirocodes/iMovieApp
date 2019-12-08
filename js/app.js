@@ -87,6 +87,26 @@ function createIframe(video) {
 }
 
 
+function createVideoTemplate(data, content) {
+    // display the videos
+    console.log('Videos: ', data);
+    const videos = data.results;
+    const length = videos.length > 4 ? 4 : videos.length;
+    const iframeContainer = document.createElement('div');
+
+
+
+    for (let i = 0; i < length; i++) {
+        const video = videos[i];
+        const iframe = createIframe(video);
+        iframeContainer.appendChild(iframe);
+        content.appendChild(iframeContainer);
+    }
+}
+
+
+
+
 document.onclick = function (event) {
     const target = event.target;
 
@@ -108,23 +128,7 @@ document.onclick = function (event) {
         // Fetch the videos
         fetch(url)
             .then((res) => res.json())
-            .then((data) => {
-
-                // display the videos
-                console.log('Videos: ', data);
-                const videos = data.results;
-                const length = videos.length > 4 ? 4 : videos.length;
-                const iframeContainer = document.createElement('div');
-
-
-
-                for (let i = 0; i < length; i++) {
-                    const video = videos[i];
-                    const iframe = createIframe(video);
-                    iframeContainer.appendChild(iframe);
-                    content.appendChild(iframeContainer);
-                }
-            })
+            .then((data) => createVideoTemplate(data, content))
             .catch((error) => {
                 console.log('Error: ', error);
 

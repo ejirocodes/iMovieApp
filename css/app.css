@@ -125,7 +125,6 @@ section.movie-section img:hover {
 .content {
     display: none;
     border: 2px solid red;
-    height: 40rem;
 }
 
 
@@ -134,6 +133,7 @@ section.movie-section img:hover {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: 1rem;
 }
 
 
