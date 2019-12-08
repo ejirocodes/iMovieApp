@@ -9,6 +9,29 @@ const url = 'https://api.themoviedb.org/3/search/movie?api_key=a7026b99934afbac9
 
 // })
 
+function createMovieContainer(movies) {
+    const movieElement = document.createElement('div');
+    movieElement.setAttribute('class', 'movie');
+
+    const movieTemplate = `
+        <section class="section">
+            ${ movies.map((movie) => {
+                return `
+                <img src=${movie.poster_path} data-movie-id=${movie.id}/>
+                `;
+            })}
+        </section>
+        <div class="content">
+          <p id="content-close"> X</p>
+        </div>
+    `;
+
+    movieElement.innerHTML = movieTemplate;
+    return movieElement;
+}
+
+
+
 searchButton.onclick = function (event) {
     event.preventDefault();
     const value = inPutField.value;
