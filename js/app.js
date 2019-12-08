@@ -3,12 +3,13 @@ const searchButton = document.querySelector("#search");
 const API_KEY = 'a7026b99934afbac930f68b59ae6c22f';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=a7026b99934afbac930f68b59ae6c22f';
 const movieDisplay = document.querySelector('#movie-display');
+const imgUrl = 'https://image.tmdb.org/t/p/w400';
 
 
 function movieSection(movies) {
     return movies.map((movie) => {
         return `
-                <img src=${movie.poster_path} data-movie-id=${movie.id}/>
+                <img src=${imgUrl + movie.poster_path} data-movie-id=${movie.id}/>
                 `;
     });
 }
