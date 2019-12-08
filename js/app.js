@@ -3,11 +3,15 @@ const searchButton = document.querySelector("#search");
 const API_KEY = 'a7026b99934afbac930f68b59ae6c22f';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=a7026b99934afbac930f68b59ae6c22f';
 
-// searchButton.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     console.log("Clicked");
 
-// })
+function movieSection(movies) {
+    return movies.map((movie) => {
+        return `
+                <img src=${movie.poster_path} data-movie-id=${movie.id}/>
+                `;
+    })
+}
+
 
 function createMovieContainer(movies) {
     const movieElement = document.createElement('div');
@@ -15,11 +19,7 @@ function createMovieContainer(movies) {
 
     const movieTemplate = `
         <section class="section">
-            ${ movies.map((movie) => {
-                return `
-                <img src=${movie.poster_path} data-movie-id=${movie.id}/>
-                `;
-            })}
+            ${ movieSection(movies)}
         </section>
         <div class="content">
           <p id="content-close"> X</p>
