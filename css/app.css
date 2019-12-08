@@ -118,7 +118,7 @@ section.movie-section img {
 
 
 section.movie-section img:hover {
-    margin-left: 0 4rem;
+    margin-left: 0 4rem; 
     transform: scale(1.1);
 }
 
@@ -126,6 +126,14 @@ section.movie-section img:hover {
     display: none;
     border: 2px solid red;
     height: 40rem;
+}
+
+
+.content div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
