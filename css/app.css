@@ -19,7 +19,7 @@
 }
 
 *::selection {
-    color: #ff55b1;
+    color: var(--bg-light);
 }
 
 html {
@@ -36,8 +36,47 @@ body {
     cursor: url('../assets/cursor.png'), auto;
 }
 
+.container h1 {
+    text-align: center;
+    font-weight: 800;
+    color: #004445;
+    margin-bottom: 1.4rem;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, .4);
+    text-transform: capitalize;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input#inputValue {
+    padding: 1rem 8rem 1rem 1.2rem;
+    margin-bottom: 1.4rem;
+    border: 1px solid var(--bg-dark);
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: #004445;
+}
+
+input#inputValue::placeholder {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #004445;
+}
+
+
+input#inputValue:focus {
+    outline: 0;
+    box-shadow: 1px 0 4px rgba(1, 19, 66, 0.4),
+    -1px 0 4px rgba(1, 19, 66, 0.4);
+}
+
 button#search {
-    background: linear-gradient(to left, var(--main-dark), var(--main-light));
+    background: linear-gradient(to left, var(--bg-dark), var(--bg-light));
     color: #fff;
     outline: none;
     border: 0;
@@ -45,16 +84,19 @@ button#search {
     font-weight: 600;
     text-transform: uppercase;
     padding: 1rem 2.5rem;
-    border-radius: .4rem;
     text-align: center;
     cursor: pointer;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+    margin-bottom: 3.2rem;
+
 }
 
 button#search:hover {
-    background: linear-gradient(to top right, var(--main-dark), var(--main-light));
-    transform: scale(1.06);
+    background: linear-gradient(to top right, var(--bg-dark), var(--bg-light));
+    transform: scale(1.1);
 }
+
+
 
 section.movie-section {
     display: flex;
@@ -67,4 +109,12 @@ section.movie-section {
 section.movie-section img {
     width: 30rem;
     margin: .5rem;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .3s;
+}
+
+
+
+section.movie-section img:hover {
+    margin-left: 0 4rem;
+    transform: scale(1.1);
 }
