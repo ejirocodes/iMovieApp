@@ -7,3 +7,12 @@
 Movie API powered by [The Movie DB](https://www.themoviedb.org/)
 
 ![TMDb Image](./assets/TMDb.png)
+
+
+# Demo
+
+![Alt Text]()
+
+# Licence
+
+[MIT](https://opensource.org/licenses/MIT)
