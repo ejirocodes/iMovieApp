@@ -1,7 +1,6 @@
 # iMovieApp
 
-`An open source web application for searching your favourite movies`
-
+**An open source web application for searching your favourite movies**
  [View project on Netlify](https://imovie-app.netlify.com)
 
 
