@@ -110,7 +110,7 @@ button#search:hover {
 
 
 
-section.movie-section {
+section.section {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -128,14 +128,14 @@ section.movie-section {
 }
 
 
-section.movie-section img {
+section.section img {
     width: 25rem;
     margin: .5rem;
     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .3s;
 }
 
 
-section.movie-section img:hover {
+section.section img:hover {
     transform: scale(1.1);
 }
 
@@ -162,7 +162,7 @@ section.movie-section img:hover {
 #content-close i {
     margin-left: 2rem;
     margin-top: 2rem;
-
+    font-size: 3.2rem;
 }
 
 .content-display {

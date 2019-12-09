@@ -6,16 +6,21 @@ const moiveContainer = document.querySelector('#movie-container');
 
 
 function movieSection(movies) {
-    return movies.map((movie) => {
+    const section = document.createElement('section');
+    section.classList = 'section';
+
+    movies.map((movie) => {
         if (movie.poster_path) {
-            return `<img 
-                src=${imgUrl + movie.poster_path} 
-                data-movie-id=${movie.id}
-                />`;
+            const img = document.createElement('img');
+            img.src = imgUrl + movie.poster_path;
+            img.setAttribute('data-movie-id', movie.id);
+
+            section.appendChild(img);
         }
+    })
 
+    return section;
 
-    });
 }
 
 
@@ -23,17 +28,22 @@ function createMovieContainer(movies, title = '') {
     const movieElement = document.createElement('div');
     movieElement.setAttribute('class', 'movie');
 
-    const movieTemplate = `
-    <h2>${title}</h2>
-        <section class="movie-section">
-            ${ movieSection(movies)}
-        </section>
-        <div class="content">
-          <p id="content-close"> <i class="fas fa-window-close"></i> </p>
-        </div>
-    `;
+    const header = document.createElement('h2');
+    header.innerHTML = title;
 
-    movieElement.innerHTML = movieTemplate;
+    const content = document.createElement('div');
+    content.classList = 'content';
+
+    const contentClose = `<p id="content-close"><i class="fas fa-window-close"></i> </p>`;
+
+    content.innerHTML = contentClose;
+
+
+    const section = movieSection(movies);
+
+    movieElement.appendChild(header);
+    movieElement.appendChild(section);
+    movieElement.appendChild(content);
     return movieElement;
 }
 
