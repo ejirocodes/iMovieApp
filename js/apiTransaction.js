@@ -31,7 +31,7 @@ function getUpcomingMovies() {
     const path = '/movie/upcoming';
     const url = generateUrl(path);
 
-    requestMovies(url, renderSearchMovies, handleError);
+    requestMovies(url, renderMovies, handleError);
 
 }
 
@@ -40,7 +40,15 @@ function getTopRatedMovies() {
     const path = '/movie/top_rated';
     const url = generateUrl(path);
 
-    requestMovies(url, renderSearchMovies, handleError);
+    requestMovies(url, renderMovies, handleError);
+
+}
+
+function getPopularMovies() {
+    const path = '/movie/popular';
+    const url = generateUrl(path);
+
+    requestMovies(url, renderMovies, handleError);
 
 }
 

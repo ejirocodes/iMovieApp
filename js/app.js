@@ -1,6 +1,7 @@
 const inputField = document.querySelector("#inputValue");
 const searchButton = document.querySelector("#search");
 const movieDisplay = document.querySelector('#movie-display');
+const moiveContainer = document.querySelector('#movie-container');
 
 
 
@@ -43,6 +44,12 @@ function renderSearchMovies(data) {
     const movieBlock = createMovieContainer(movies);
     movieDisplay.appendChild(movieBlock);
     console.log('Data: ', data);
+}
+
+function renderMovies(data) {
+    const movies = data.results;
+    const movieBlock = createMovieContainer(movies);
+    moiveContainer.appendChild(movieBlock);
 }
 
 
@@ -133,6 +140,8 @@ document.onclick = function (event) {
 
 
 
-// getUpcomingMovies();
+getUpcomingMovies();
 
 getTopRatedMovies();
+
+getPopularMovies();
