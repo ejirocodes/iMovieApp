@@ -40,7 +40,7 @@ body {
 .container h1 {
     text-align: center;
     font-weight: 800;
-    color: #004445;
+    color: var(--bg-dark);
     margin-bottom: 1.4rem;
     text-shadow: 2px 1px 3px rgba(0, 0, 0, .4);
     text-transform: capitalize;
@@ -48,6 +48,10 @@ body {
     margin-top: 3rem;
 }
 
+p {
+    font-weight: 700;
+    color: var(--main-dark);
+}
 
 form {
     display: flex;
@@ -109,12 +113,20 @@ section.movie-section {
 }
 
 
+#movie-display {
+    margin-bottom: 8rem;
+}
+
+.movie {
+    margin-bottom: 5rem;
+}
+
+
 section.movie-section img {
     width: 25rem;
     margin: .5rem;
     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .3s;
 }
-
 
 
 section.movie-section img:hover {

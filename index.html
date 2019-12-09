@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iMovieApp &verbar; Search Your Favourite Movie</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <div class="container"> 
+    <div class="container">
       <h1>Search your favourite movie with the iMovieApp</h1>
 
       <form>
         <div class="form-group">
-          <input type="text" id="inputValue" placeholder="Search..."/>
+          <input type="text" id="inputValue" placeholder="Search..." />
         </div>
 
         <button type="submit" id="search">Search a movie</button>
-        <!-- <p id="movie-category">Upcoming Movies</p> -->
+        <p id="movie-category">Scroll <i class="fas fa-angle-double-right"></i> to view more</p>
       </form>
       <div id="movie-display"></div>
       <h3></h3>
       <div id="movie-container"></div>
-
-
-
     </div>
 
-
-     
-      <script src="./js/apiTransaction.js"></script>
+    <script src="./js/apiTransaction.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
