@@ -62,13 +62,23 @@ function renderSearchMovies(data) {
     console.log('Data: ', data);
 }
 
+function searchMovie(value) {
+    const path = '/search/movie';
+    const url = generateUrl(path) + '&query=' + value;
+    requestMovies(url, renderSearchMovies);
+
+}
+
+function handleError(error) {
+    console.log('Error: ', error);
+
+}
 
 
 searchButton.onclick = function (event) {
     event.preventDefault();
     const value = inputField.value;
     const path = '/search/movie';
-
     const dynamicUrl = generateUrl(path) + '&query=' + value;
 
 
