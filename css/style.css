@@ -50,7 +50,12 @@ body {
 
 p {
     font-weight: 700;
-    color: var(--main-dark);
+    color: #b21f66;
+}
+
+
+h2 {
+    color: #211717;
 }
 
 form {
