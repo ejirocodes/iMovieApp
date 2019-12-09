@@ -118,7 +118,6 @@ section.movie-section img {
 
 
 section.movie-section img:hover {
-    margin-left: 4rem;
     transform: scale(1.1);
 }
 
