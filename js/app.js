@@ -133,4 +133,6 @@ document.onclick = function (event) {
 
 
 
-getUpcomingMovies();
+// getUpcomingMovies();
+
+getTopRatedMovies();

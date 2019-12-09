@@ -31,7 +31,16 @@ function getUpcomingMovies() {
     const path = '/movie/upcoming';
     const url = generateUrl(path);
 
+    requestMovies(url, renderSearchMovies, handleError);
+
+}
+
+
+function getTopRatedMovies() {
+    const path = '/movie/top_rated';
+    const url = generateUrl(path);
 
     requestMovies(url, renderSearchMovies, handleError);
 
 }
+
