@@ -1,25 +1,8 @@
 const inputField = document.querySelector("#inputValue");
 const searchButton = document.querySelector("#search");
-const API_KEY = 'a7026b99934afbac930f68b59ae6c22f';
-const url = 'https://api.themoviedb.org/3/search/movie?api_key=a7026b99934afbac930f68b59ae6c22f';
 const movieDisplay = document.querySelector('#movie-display');
-const imgUrl = 'https://image.tmdb.org/t/p/w400';
 
 
-function generateUrl(path) {
-    const url = `https://api.themoviedb.org/3${path}?api_key=a7026b99934afbac930f68b59ae6c22f`;
-    return url;
-}
-
-
-function requestMovies(url, onComplete, onError) {
-    fetch(url)
-        .then((res) => res.json())
-        .then(onComplete)
-        .catch((onError) => {
-        });
-
-}
 
 function movieSection(movies) {
     return movies.map((movie) => {
@@ -62,12 +45,7 @@ function renderSearchMovies(data) {
     console.log('Data: ', data);
 }
 
-function searchMovie(value) {
-    const path = '/search/movie';
-    const url = generateUrl(path) + '&query=' + value;
-    requestMovies(url, renderSearchMovies);
 
-}
 
 function handleError(error) {
     console.log('Error: ', error);
@@ -78,17 +56,7 @@ function handleError(error) {
 searchButton.onclick = function (event) {
     event.preventDefault();
     const value = inputField.value;
-    const path = '/search/movie';
-    const dynamicUrl = generateUrl(path) + '&query=' + value;
-
-
-    fetch(dynamicUrl)
-        .then((res) => res.json())
-        .then(renderSearchMovies)
-        .catch((error) => {
-            console.log('Error: ', error);
-
-        });
+    searchMovie(value);
 
     console.log('Value: ', value);
 
@@ -162,3 +130,7 @@ document.onclick = function (event) {
     }
 
 };
+
+
+
+getUpcomingMovies();
