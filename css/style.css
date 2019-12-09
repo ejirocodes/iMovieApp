@@ -48,7 +48,7 @@ body {
     margin-top: 3rem;
 }
 
-p {
+form p {
     font-weight: 700;
     color: #b21f66;
 }
@@ -113,13 +113,14 @@ button#search:hover {
 section.movie-section {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
-    /* padding: 2rem 0 10rem 0; */
 }
 
 
 #movie-display {
     margin-bottom: 8rem;
+    margin-top: 4rem;
 }
 
 .movie {
@@ -140,7 +141,8 @@ section.movie-section img:hover {
 
 .content {
     display: none;
-    border: 2px solid red;
+    border: 2px solid #3c4245;
+    margin: 2rem;
 }
 
 
@@ -152,6 +154,16 @@ section.movie-section img:hover {
     margin: 1rem;
 }
 
+#content-close {
+    cursor: pointer;
+    color: red;
+}
+
+#content-close i {
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+}
 
 .content-display {
     display: block;

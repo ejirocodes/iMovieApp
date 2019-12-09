@@ -29,7 +29,7 @@ function createMovieContainer(movies, title = '') {
             ${ movieSection(movies)}
         </section>
         <div class="content">
-          <p id="content-close"> X</p>
+          <p id="content-close"> <i class="fas fa-window-close"></i> </p>
         </div>
     `;
 
@@ -140,7 +140,7 @@ document.onclick = function (event) {
 };
 
 
-searchMovie('Wonder Woman');
+searchMovie('Captain America');
 
 getUpcomingMovies();
 
