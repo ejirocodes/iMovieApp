@@ -8,11 +8,10 @@ Movie API powered by [The Movie DB](https://www.themoviedb.org/)
 
 ![TMDb Image](./assets/TMDb.png)
 
+## Demo
 
-# Demo
+![iMovieApp Demo](./assets/video/iMovieApp-Demo.gif)
 
-![Alt Text]()
-
-# Licence
+## Licence
 
 [MIT](https://opensource.org/licenses/MIT)
