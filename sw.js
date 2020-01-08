@@ -19,6 +19,9 @@ self.addEventListener('install', event => {
             .then(cache => {
                return cache.addAll(filesToCache);
             })
+            .then(() => {
+                return self.skipWaiting();
+        })
     );
 });
 
