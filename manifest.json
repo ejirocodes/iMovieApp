@@ -1,0 +1,23 @@
+{
+    "name": "iMovie",
+    "short_name": "iMovie",
+    "description": "An app for movie lovers to seacrh for movies",
+    "lang": "en-GB",
+    "theme_color": "#004445",
+    "background_color": "#004445",
+    "display": "standalone",
+    "Scope": "/",
+    "start_url": "/index.html",
+    "icons": [
+        {
+            "src": "./assets/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": ".assets/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
