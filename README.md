@@ -1,6 +1,6 @@
 # iMovieApp
 
-**An open source web application for movie search**
+**A Simple Progressive Web application for movie search :)**
 [View project on Netlify](https://imovie-app.netlify.com)
 
 ## Demo
