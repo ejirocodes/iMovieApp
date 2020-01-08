@@ -17,11 +17,11 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
             .then(cache => {
-               return cache.addAll(filesToCache);
+                return cache.addAll(filesToCache);
             })
             .then(() => {
                 return self.skipWaiting();
-        })
+            })
     );
 });
 
@@ -43,22 +43,14 @@ self.addEventListener('fetch', event => {
                 console.log('Network request for ', event.request.url);
                 return fetch(event.request)
                     .then(response => {
-                        // Respond with custom 404 page
-                        if (response.status === 404) {
-                            return caches.match('./pages/404.html');
+                        if (response) {
+                            return response;
                         }
-
-                        return caches.open(staticCacheName)
-                            .then(cache => {
-                                cache.put(event.request.url, response.clone());
-                                return response;
-                            });
+                        return fetch(event.request);
                     });
 
             }).catch(error => {
                 console.log('You have a ', error);
-                //  Respond with custom offline page
-                return caches.match('./pages/offline.html');
             })
     );
 });
