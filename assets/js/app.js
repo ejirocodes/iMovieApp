@@ -32,7 +32,7 @@ function movieSection(movies) {
 
             section.appendChild(img);
         }
-    })
+    });
 
     return section;
 

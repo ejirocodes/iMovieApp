@@ -33,7 +33,7 @@ body {
     font-weight: 600;
     font-size: 2rem;
     line-height: 2;
-    cursor: url('../assets/cursor.png'), auto;
+    cursor: url('../cursor.png'), auto;
     background-color: #f7f7f7;
 }
 
