@@ -1,3 +1,18 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../../sw.js', {
+            scope: '/'
+        })
+            .then(reg => {
+                console.log('Service worker registered', reg.scope);
+            })
+            .catch(err => {
+                console.log('Service worker failed to registered', err);
+
+            });
+    });
+}
+
 const inputField = document.querySelector("#inputValue");
 const searchButton = document.querySelector("#search");
 const movieDisplay = document.querySelector('#movie-display');
