@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50vh 2rem;
+    }
+
+    #spacer {
+        padding: 2px;
+    }
+
+    p {
+        font-size: 200px;
+        margin: 0;
+        font-family: 'Muli', sans-serif;
+        color: white
+    }
+
+    body {
+        background-color: black;
+
+    }
+
+    #tag {
+        color: white;
+        font-family: 'Muli', sans-serif;
+        font-size: 40px;
+    }
+
+    @media only screen and (max-width: 530px) {
+        P {
+            font-size: 30px;
+            margin-left: 35%;
+
+        }
+
+        #tag {
+            font-size: 20px;
+            margin-top: -5%;
+            margin-left: 15%;
+        }
+    }
+
+    @media only screen and (min-width: 531px) and (max-width: 580px) {
+        P {
+            font-size: 50px;
+            margin-left: 30%;
+
+        }
+
+        #tag {
+            font-size: 25px;
+            margin-top: -10%;
+            margin-left: 15%;
+        }
+    }
+
+    @media only screen and (min-width: 581px) and (max-width: 850px) {
+        P {
+            font-size: 100px;
+            margin-left: 38%;
+            margin-top: 12%;
+
+        }
+
+
+        #tag {
+            font-size: 40px;
+            margin-top: -15%;
+            margin-left: 23%;
+        }
+    }
+
+    #not-found {
+        font-size: 6rem;
+    }
+
+    a {
+        color: #fff;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+</style>
+
+<body>
+    <main>
+        <p id="not-found">Page not found</p>
+        <p id="tag">You've reached the end of the earth</p>
+        <a href="../index.html">Home</a>
+    </main>
+</body>
+
+</html>
