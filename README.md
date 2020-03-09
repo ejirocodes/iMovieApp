@@ -1,6 +1,6 @@
 # iMovieApp
 
-**A Simple Progressive Web application for movie search :)**
+**Searc your favourite movie with iMovieApp**
 [View project on Netlify](https://imovie-app.netlify.com)
 
 ## Demo
